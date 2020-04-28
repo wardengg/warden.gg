@@ -155,19 +155,13 @@ hr{
 .btn{
 	display: inline-block;
 	margin-right: map-get( $spacers, 2 );
-	padding: map-get( $spacers, 1 ) map-get( $spacers, 2 );
+	padding: map-get( $spacers, 1 ) map-get( $spacers, 3 );
 	background-color: $color1;
-	border: rem(2) solid $color-black;
-	border-radius: rem(7.5);
+	border-radius: rem(5);
 	color: $color-white;
 	font-weight: 700;
 	text-transform: uppercase;
 	transition: $transition-base-speed ease-in-out transform;
-	
-	&:hover{
-		color: $color-white !important;
-		transform: scale(1.1);
-	}
 
 	&.btn-large{
 		font-size: rem(28);

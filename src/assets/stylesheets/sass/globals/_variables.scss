@@ -27,6 +27,22 @@ $grid-breakpoints: (
     xxl: 1600px
 );
 
+// Spacing
+$spacer: rem(40);
+$spacers: ();
+$spacers: map-merge(
+    (
+        0: 0,
+        1: ($spacer * .25),                 //10px
+        2: ($spacer * .5),                  //20px
+        3: $spacer,                         //40px
+        4: ($spacer + ( $spacer * .5)),     //60px
+        5: ($spacer * 2),                   //80px
+        6: ($spacer * 3),                   //120px
+    ),
+    $spacers
+);
+
 // Base sizing
 $content-space-base: 30;
 $content-space-base-x2: 60;
@@ -35,7 +51,7 @@ $content-space: #{$content-space-base}px;
 $content-space-x2: #{$content-space-base}px;
 
 // Transition defaults
-$transition-base-speed: .3s;
+$transition-base-speed: .2s;
 
 // Placeholders
 %transition-all{

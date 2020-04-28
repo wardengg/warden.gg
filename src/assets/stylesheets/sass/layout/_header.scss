@@ -1,12 +1,92 @@
 /* Header */
 #header{
-    padding: map-get( $spacers, 4 ) 0;
+    position: fixed;
+    width: 100%;
+    padding: map-get( $spacers, 3 ) 0;
+    z-index: 998;
 
     .logo{
+        &:hover{
+            img{
+                transform: translateX(30%);
+            }
+        }
+
+        img{
+            margin-right: map-get( $spacers, 2 );
+            @extend %transition-all;
+        }
+
         .logo-title{
             display: block;
             font-size: rem( 36 );
             font-family: $font;
+        }
+    }
+
+    .navigation-menu{
+        > ul{
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+
+            > li{
+                position: relative;
+                margin-bottom: 0;
+
+                &:hover{
+                    > a{
+                        opacity: 1;
+                        background-color: rgba( $color3, 0.8 );
+                        border-bottom-color: $color1;
+                    }
+
+                    > .sub-navigation{
+                        display: block;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        opacity: 1;
+                    }
+                }
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                a{
+                    display: block;
+                    padding: rem( 15 );
+                    color: $color-white;
+                    font-family: $font;
+                    font-size: rem( 28 );
+                    border-bottom: rem( 3 ) solid transparent;
+                    margin-bottom: 0;
+                    @extend %transition-all;
+                }
+
+                .sub-navigation{
+                    display: none;
+                    width: 100%;
+                    list-style: none;
+                    background: rgba( $color3, 0.8 );
+                    margin-top: 0;
+                    padding-left: 0;
+                    @extend %transition-all;
+                    
+                    li{
+                        margin-bottom: 0;
+
+                        a{
+                            font-size: rem( 24 );
+
+                            &:hover{
+                                color: $color1;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

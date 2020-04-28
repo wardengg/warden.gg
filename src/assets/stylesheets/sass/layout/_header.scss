@@ -1,0 +1,12 @@
+/* Header */
+#header{
+    padding: map-get( $spacers, 4 ) 0;
+
+    .logo{
+        .logo-title{
+            display: block;
+            font-size: rem( 36 );
+            font-family: $font;
+        }
+    }
+}

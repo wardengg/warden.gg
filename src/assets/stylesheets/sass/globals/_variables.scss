@@ -1,0 +1,43 @@
+// Variables
+// ===========================================
+
+// Font
+$font: 'Bebas Neue', sans-serif;
+$font2: 'Open Sans', sans-serif;
+$font-size-base: 16;
+$font-line-height: 20;
+
+// Width(s) / Height(s)
+$wrapper-default: 1440px;
+
+// Default colours
+$color1: #37b8cd;
+$color2: #2da9d8;
+$color3: #2a2b2d;
+$color-white: #ffffff;
+$color-black: #000000;
+
+// Update the Bootstrap Breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 460px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+    xxl: 1600px
+);
+
+// Base sizing
+$content-space-base: 30;
+$content-space-base-x2: 60;
+$content-space-base-half: 15;
+$content-space: #{$content-space-base}px;
+$content-space-x2: #{$content-space-base}px;
+
+// Transition defaults
+$transition-base-speed: .3s;
+
+// Placeholders
+%transition-all{
+    transition: $transition-base-speed all ease-in-out;
+}

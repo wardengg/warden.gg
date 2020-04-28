@@ -1,0 +1,13 @@
+/* Functions */
+
+// Calculate rem
+@function rem( $pixels, $default: $font-size-base ){
+    @if ( unitless( $pixels ) ){
+        $pixels: $pixels * 1px;
+    }
+    @if ( unitless( $default ) ){
+        $default: $default * 1px;
+    }
+    
+    @return $pixels / $default * 1rem;
+}

@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app">
+		<header id="header">
+			<div class="wrap d-flex justify-content-between align-items-center">
+				<div class="logo">
+					<router-link to="/" class="d-flex align-items-center">
+						<img class="mr-2" src="./assets/logo.svg" alt="Warden.GG Logo" width="48" height="48">
+						<span class="logo-title">Warden.gg</span>
+					</router-link>
+				</div>
+				<div class="navigation-menu d-flex align-items-center justify-content-center">
+					<nav class="main-navigation-menu">
+						<ul>
+							<li>About</li>
+							<li>Servers</li>
+							<li>Contact</li>
+							<li>Status</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<router-view/>
+	</div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+	@import './assets/stylesheets/sass/style.scss';  
 </style>

@@ -1,0 +1,18 @@
+// Base
+// ===========================================
+
+body{
+    background-color: $color3;
+    font-size: rem($font-size-base);
+    font-family: $font2;
+    line-height: 1;
+}
+
+.wrap{
+    max-width: $wrapper-default;
+    margin: 0 auto;
+
+    @include media-breakpoint-down(xl){
+        padding: 0 rem(30);
+    }
+}

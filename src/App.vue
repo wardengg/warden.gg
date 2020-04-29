@@ -1,14 +1,15 @@
 <template>
 	<div id="app">
-		<header id="header">
+		<FixedHeader :threshold="50">
+		<header id="header" v-bind:class="{ mobileIsActive: isMobileActive }">
 			<div class="wrap d-flex align-items-center">
-				<div class="logo mr-3">
+				<div class="logo">
 					<router-link to="/" class="d-flex align-items-center">
 						<img class="mr-2" src="/static/images/logo.svg" alt="Warden.GG Logo" width="48" height="48">
 						<span class="logo-title">Warden.gg</span>
 					</router-link>
 				</div>
-				<nav class="navigation-menu mr-auto">
+				<nav class="navigation-menu main-navigation mr-auto">
 					<ul class="d-flex align-items-center justify-content-center">
 						<li>
 							<router-link to="/">Minecraft Hosting</router-link>
@@ -28,7 +29,7 @@
 						</li>
 					</ul>
 				</nav>
-				<nav class="navigation-menu">
+				<nav class="navigation-menu secondary-navigation">
 					<ul class="d-flex align-items-center justify-content-center">
 						<li>
 							<router-link to="/">Login</router-link>
@@ -40,11 +41,42 @@
 						<li><router-link to="/">Support</router-link></li>
 					</ul>
 				</nav>
+				<a href="#" class="main-navigation-mobile-trigger" v-on:click="openMobileNavigation">
+					<span>Menu</span>
+				</a>
 			</div>
+			<nav v-bind:class="{ active: isMobileActive }" class="navigation-menu mobile-navigation-menu">
+				<ul>
+					<li><router-link to="/">Minecraft Hosting</router-link></li>
+					<li><router-link to="/">Game Hosting</router-link></li>
+					<li><router-link to="/">Company</router-link></li>
+				</ul>
+			</nav>
 		</header>
+		</FixedHeader>
 		<router-view/>
 	</div>
 </template>
+
+<script>
+import FixedHeader from 'vue-fixed-header'
+export default {
+	components: {
+		FixedHeader
+	},
+	data(){
+		return {
+			isMobileActive: false
+		}
+	},
+	methods:{
+		openMobileNavigation( e ){
+			e.preventDefault();
+			this.isMobileActive = !this.isMobileActive
+		}
+	}
+}
+</script>
 
 <style lang="scss">
 	@import './assets/stylesheets/sass/style.scss';  

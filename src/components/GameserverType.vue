@@ -1,0 +1,12 @@
+<template>
+    <h1>{{ name }}</h1>
+</template>
+
+<script>
+export default {
+    name: 'GameserverType',
+    props: {
+        name: String
+    }
+}
+</script>

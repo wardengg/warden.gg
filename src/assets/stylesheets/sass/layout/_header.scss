@@ -4,11 +4,25 @@
     width: 100%;
     padding: map-get( $spacers, 3 ) 0;
     z-index: 998;
+    @extend %transition-all;
+
+    &.vue-fixed-header--isFixed, &.mobileIsActive{
+        background-color: rgba( $color3, 0.8 );
+        padding: map-get( $spacers, 2 ) 0;
+    }
 
     .logo{
-        &:hover{
-            img{
-                transform: translateX(30%);
+        margin-right: map-get( $spacers, 3 );
+
+        @include media-breakpoint-down(sm){
+            margin-right: 0;
+        }
+
+        @include media-breakpoint-up(md){
+            &:hover{
+                img{
+                    transform: translateX(30%);
+                }
             }
         }
 
@@ -21,10 +35,46 @@
             display: block;
             font-size: rem( 36 );
             font-family: $font;
+
+            @include media-breakpoint-down(sm){
+                display: none;
+            }
         }
     }
 
     .navigation-menu{
+        @include media-breakpoint-down(md){
+            &.main-navigation{
+                display: none;
+                order: 3;
+            }
+
+            &.secondary-navigation{
+                margin-right: auto;
+            }
+        }
+
+        &.mobile-navigation-menu{
+            position: absolute;
+            top: 100%;
+            display: none;
+            width: 100%;
+            background-color: rgba( $color3, 0.8 );
+
+            &.active{
+                display: block;
+            }
+
+            ul{
+                width: 100%;
+
+                li{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
         > ul{
             list-style: none;
             margin-bottom: 0;
@@ -38,7 +88,6 @@
                     > a{
                         opacity: 1;
                         background-color: rgba( $color3, 0.8 );
-                        border-bottom-color: $color1;
                     }
 
                     > .sub-navigation{
@@ -60,7 +109,6 @@
                     color: $color-white;
                     font-family: $font;
                     font-size: rem( 28 );
-                    border-bottom: rem( 3 ) solid transparent;
                     margin-bottom: 0;
                     @extend %transition-all;
                 }
@@ -86,6 +134,48 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .main-navigation-mobile-trigger{
+        display: flex;
+        align-items: center;
+        width: rem(32);
+        height: rem(32);
+        
+        &:hover{
+            opacity: 1;
+        }
+
+        @include media-breakpoint-up(lg){
+            display: none;
+        }
+
+        span{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: rem(3);
+            background-color: $color-white;
+            font-size: 0;
+
+            &:before, &:after{
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: rem(3);
+                background-color: $color-white;
+            }
+
+            &:before{
+                top: rem(10);
+            }
+
+            &:after{
+                top: rem(-10);
             }
         }
     }

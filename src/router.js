@@ -17,11 +17,27 @@ export default new Router({
 				metaTags: [
 					{
 						name: 'description',
-						content: 'Warden.gg - Reliable Game Server Hosting'
+						content: 'Reliable Game Server Hosting'
+					},
+					{
+						name: 'og:title',
+						content: 'Warden.gg'
+					},
+					{
+						name: 'og:url',
+						content: 'https://warden.gg'
+					},
+					{
+						name: 'og:url',
+						content: 'https://warden.gg'
+					},
+					{
+						name: 'og:image',
+						content: 'https://warden.gg/static/images/logo.svg'
 					},
 					{
 						name: 'og:description',
-						content: 'Warden.gg - Reliable Game Server Hosting'
+						content: 'Reliable Game Server Hosting'
 					}
 				]
 			}

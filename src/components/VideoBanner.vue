@@ -13,7 +13,7 @@
 export default {
     name: 'VideoBanner',
     mounted: function(){
-        this.$refs.videoRef.src = '/videos/videobanner.mp4';
+        this.$refs.videoRef.src = '/static/videos/videobanner.mp4';
         this.$refs.videoRef.play();
     }
 }

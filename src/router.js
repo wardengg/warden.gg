@@ -16,51 +16,51 @@ export default new Router({
 				title: 'Warden.gg - Reliable Game Server Hosting',
 				metaTags: [
 					{
-						name: 'description',
+						property: 'description',
 						content: 'Reliable Game Server Hosting'
 					},
 					{
-						name: 'og:title',
+						property: 'og:title',
 						content: 'Warden.gg'
 					},
 					{
-						name: 'og:url',
+						property: 'og:url',
 						content: 'https://warden.gg'
 					},
 					{
-						name: 'og:url',
+						property: 'og:url',
 						content: 'https://warden.gg'
 					},
 					{
-						name: 'og:image',
+						property: 'og:image',
 						content: 'https://warden.gg/static/images/logo.svg'
 					},
 					{
-						name: 'og:description',
+						property: 'og:description',
 						content: 'Reliable Game Server Hosting'
 					},
 					{
-						name: 'twitter:card',
+						property: 'twitter:card',
 						content: 'summary'
 					},
 					{
-						name: 'twitter:title',
+						property: 'twitter:title',
 						content: 'Warden.gg'
 					},
 					{
-						name: 'twitter:url',
+						property: 'twitter:url',
 						content: 'https://warden.gg'
 					},
 					{
-						name: 'twitter:url',
+						property: 'twitter:url',
 						content: 'https://warden.gg'
 					},
 					{
-						name: 'twitter:image',
+						property: 'twitter:image',
 						content: 'https://warden.gg/static/images/logo.svg'
 					},
 					{
-						name: 'twitter:description',
+						property: 'twitter:description',
 						content: 'Reliable Game Server Hosting'
 					}
 				]

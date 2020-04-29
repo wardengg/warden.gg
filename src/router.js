@@ -38,6 +38,30 @@ export default new Router({
 					{
 						name: 'og:description',
 						content: 'Reliable Game Server Hosting'
+					},
+					{
+						name: 'twitter:card',
+						content: 'summary'
+					},
+					{
+						name: 'twitter:title',
+						content: 'Warden.gg'
+					},
+					{
+						name: 'twitter:url',
+						content: 'https://warden.gg'
+					},
+					{
+						name: 'twitter:url',
+						content: 'https://warden.gg'
+					},
+					{
+						name: 'twitter:image',
+						content: 'https://warden.gg/static/images/logo.svg'
+					},
+					{
+						name: 'twitter:description',
+						content: 'Reliable Game Server Hosting'
 					}
 				]
 			}

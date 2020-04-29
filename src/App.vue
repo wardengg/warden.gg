@@ -4,7 +4,7 @@
 			<div class="wrap d-flex align-items-center">
 				<div class="logo mr-3">
 					<router-link to="/" class="d-flex align-items-center">
-						<img class="mr-2" src="/logo.svg" alt="Warden.GG Logo" width="48" height="48">
+						<img class="mr-2" src="/static/images/logo.svg" alt="Warden.GG Logo" width="48" height="48">
 						<span class="logo-title">Warden.gg</span>
 					</router-link>
 				</div>

@@ -57,3 +57,10 @@ $transition-base-speed: .2s;
 %transition-all{
     transition: $transition-base-speed all ease-in-out;
 }
+
+%gradient-background{
+    background: -moz-linear-gradient(90deg, rgba($color1,1) 0%, rgba($color2,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba($color1,1) 0%, rgba($color2,1) 100%);
+    background: linear-gradient(90deg, rgba($color1,1) 0%, rgba($color2,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#37b8cd",endColorstr="#2da9d8",GradientType=1);
+}

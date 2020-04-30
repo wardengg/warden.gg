@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<FixedHeader :threshold="50">
-		<header id="header" v-bind:class="{ mobileIsActive: isMobileActive }">
+		<header id="header" v-bind:class="{ 'mobile-active': isMobileActive, 'internal-page': isInternalPage }">
 			<div class="wrap d-flex align-items-center">
 				<div class="logo">
 					<router-link to="/" class="d-flex align-items-center">
@@ -66,7 +66,8 @@ export default {
 	},
 	data(){
 		return {
-			isMobileActive: false
+			isMobileActive: false,
+			internalPage: false
 		}
 	},
 	methods:{

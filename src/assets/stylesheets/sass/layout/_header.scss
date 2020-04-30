@@ -6,7 +6,7 @@
     z-index: 998;
     @extend %transition-all;
 
-    &.vue-fixed-header--isFixed, &.mobileIsActive{
+    &.vue-fixed-header--isFixed, &.mobile-active{
         background-color: rgba( $color3, 0.8 );
         padding: map-get( $spacers, 2 ) 0;
     }
@@ -71,6 +71,12 @@
                 li{
                     width: 100%;
                     text-align: center;
+
+                    &:hover{
+                        a{
+                            color: $color1;
+                        }
+                    }
                 }
             }
         }

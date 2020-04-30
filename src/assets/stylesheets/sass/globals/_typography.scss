@@ -154,10 +154,9 @@ hr{
 /* Misc. */
 .btn{
 	display: inline-block;
-	margin-right: map-get( $spacers, 2 );
 	padding: map-get( $spacers, 1 ) map-get( $spacers, 3 );
 	background-color: $color1;
-	border-radius: rem(5);
+	font-family: $font2;
 	color: $color-white;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -171,6 +170,10 @@ hr{
 	&.btn-small{
 		font-size: rem(14);
 		line-height: rem(18);
+	}
+
+	&.btn-alt{
+		background-color: $color3;
 	}
 }
 
@@ -188,4 +191,14 @@ hr{
 		width: 100%;
 		height: 100%;
 	}
+}
+
+section[class*="-section"]{
+	padding: map-get( $spacers, 3 );
+}
+
+.section-header{
+	text-align: center;
+	font-family: $font;
+	color: $color-white;
 }

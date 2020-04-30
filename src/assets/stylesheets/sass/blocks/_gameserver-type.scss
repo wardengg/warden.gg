@@ -1,0 +1,37 @@
+/* Gameserver Type */
+.gameserver-type-section{
+    position: relative;
+
+    .section-header{
+        margin-bottom: map-get( $spacers, 3 );
+    }
+
+    .gameserver-type-item{
+        height: 100%;
+        padding: map-get( $spacers, 2 );
+        text-align: center;
+        cursor: pointer;
+        @extend %gradient-background;
+        @extend %transition-all;
+
+        &:hover{
+            transform: translateY(-5%);
+        }
+
+        .image-wrapper{
+            min-height: rem(128);
+            margin-bottom: map-get( $spacers, 2 );
+
+            img{
+                min-width: rem(128);
+                height: auto;
+            }
+        }
+
+        h2{
+            color: $color-white;
+            font-family: $font;
+            text-align: center;
+        }
+    }
+}

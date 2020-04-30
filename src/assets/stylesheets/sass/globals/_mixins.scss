@@ -25,7 +25,7 @@
     left: 0;
     width: 0;
     height: 0;
-    border-right: rem(0) solid transparent;
-    border-left: calc( 100vw - 17px ) solid transparent;
+    border-right: calc( 100vw - 17px ) solid transparent;
+    border-left: rem(0) solid transparent;
     border-bottom: rem(50) solid $color;
 }

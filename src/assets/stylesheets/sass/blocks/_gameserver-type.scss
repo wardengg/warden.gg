@@ -2,8 +2,22 @@
 .gameserver-type-section{
     position: relative;
 
+    &:before{
+        @include top-triangle( $color3 );
+    }
+
+    &:after{
+        @include bottom-triangle( $color3 );
+    }
+
     .section-header{
         margin-bottom: map-get( $spacers, 3 );
+    }
+
+    .col-12{
+        @include media-breakpoint-down(md){
+            margin-bottom: map-get( $spacers, 2 );
+        }
     }
 
     .gameserver-type-item{

@@ -1,5 +1,5 @@
 <template>
-    <div class="col-lg-3 col-md-4 col-12">
+    <div class="col-lg-3 col-md-6 col-12">
         <div class="gameserver-type-item">
             <div class="image-wrapper d-flex align-items-center justify-content-center">
                 <img :src="image.url" :alt="name" :height="image.height" :width="image.width">

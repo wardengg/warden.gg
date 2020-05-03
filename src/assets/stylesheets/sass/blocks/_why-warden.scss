@@ -1,5 +1,7 @@
 /* Why Warden */
 .why-warden-section{
+    overflow: hidden;
+
     .section-header{
         color: $color3;
     }
@@ -9,6 +11,11 @@
         padding: map-get( $spacers, 2 );
         background-color: $color3;
         text-align: center;
+        @extend %transition-all;
+
+        &:hover{
+            transform: translateY(-5%);
+        }
 
         .icon{
             max-height: rem( 128 );
@@ -34,5 +41,11 @@
                 font-size: rem( 18 );
             }
         }
+    }
+}
+
+@keyframes fly-in{
+    to{
+        transform: translateX(0);
     }
 }

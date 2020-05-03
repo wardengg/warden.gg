@@ -2,13 +2,21 @@
 #header{
     position: fixed;
     width: 100%;
-    padding: map-get( $spacers, 3 ) 0;
     z-index: 998;
     @extend %transition-all;
 
     &.vue-fixed-header--isFixed, &.mobile-active{
         background-color: rgba( $color3, 0.8 );
-        padding: map-get( $spacers, 2 ) 0;
+        
+        .navigation-menu{
+            > ul{
+                > li{
+                    a{
+                        padding: map-get( $spacers, 2 )+rem( 10 ) map-get( $spacers, 2 );
+                    }
+                }
+            }
+        }
     }
 
     .logo{
@@ -71,6 +79,11 @@
                 li{
                     width: 100%;
                     text-align: center;
+                    padding: 0;
+
+                    a{
+                        padding: map-get( $spacers, 2 );
+                    }
 
                     &:hover{
                         a{
@@ -111,7 +124,7 @@
 
                 a{
                     display: block;
-                    padding: rem( 15 );
+                    padding: map-get( $spacers, 3 ) map-get( $spacers, 2 );
                     color: $color-white;
                     font-family: $font;
                     font-size: rem( 28 );
@@ -132,6 +145,7 @@
                         margin-bottom: 0;
 
                         a{
+                            padding: map-get( $spacers, 2 );
                             font-size: rem( 24 );
 
                             &:hover{

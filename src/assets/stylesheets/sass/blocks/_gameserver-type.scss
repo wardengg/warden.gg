@@ -2,6 +2,7 @@
 .gameserver-type-section{
     margin-top: -#{map-get( $spacers, 3 )};
     position: relative;
+    overflow: hidden;
 
     &:before{
         @include top-triangle( $color3 );
@@ -22,7 +23,7 @@
     }
 
     .gameserver-type-inner{
-        padding: map-get( $spacers, 3 );
+        padding: map-get( $spacers, 3 ) 0;
         background-color: $color3;
     }
 

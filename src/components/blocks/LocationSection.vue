@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import LocationMarker from '../components/LocationMarker.vue'
+import LocationMarker from '../../components/partials/LocationMarker.vue'
 export default {
     name: 'LocationSection',
     components: {

@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import GameserverTypeItem from '../components/GameserverTypeItem.vue'
+import GameserverTypeItem from '../../components/partials/GameserverTypeItem.vue'
 export default {
     name: 'GameserverTypeSection',
     components: {

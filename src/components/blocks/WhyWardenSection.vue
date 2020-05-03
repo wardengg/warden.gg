@@ -36,7 +36,7 @@ export default {
                 {
                     icon: '/static/images/support.svg',
                     title: 'Premium Support',
-                    description: "Sh*t happens; that's why we're always going to be there for you, regardless of the situation."
+                    description: "Bad things can sometimes be inevitable, but that's why we're always going to be there for you, regardless of the situation."
                 },
                 {
                     icon: '/static/images/ftp.svg',

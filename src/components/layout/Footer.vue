@@ -5,8 +5,8 @@
                 <div class="col-lg-3 footer-column-item">
                     <h4 class="footer-title">Minecraft Hosting</h4>
                     <ul class="footer-navigation">
-                        <li><router-link to="/">Java Edition Hosting</router-link></li>
-                        <li><router-link to="/">Bedrock Edition Hosting</router-link></li>
+                        <li><router-link to="/minecraft/java">Java Edition Hosting</router-link></li>
+                        <li><router-link to="/minecraft/bedrock">Bedrock Edition Hosting</router-link></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 footer-column-item">

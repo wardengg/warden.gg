@@ -10,6 +10,9 @@
 @import "../../../../node_modules/bootstrap/scss/utilities/align";
 @import "../../../../node_modules/animate.sass/animate";
 
+// Include some extra vendors
+@import "../../../../node_modules/nprogress/nprogress";
+
 // Import the basics
 @import "globals/base";
 @import "globals/reset";
@@ -26,3 +29,5 @@
 @import "blocks/gameserver-type";
 @import "blocks/locations";
 @import "blocks/why-warden";
+@import "blocks/image-banner";
+@import "blocks/plans";

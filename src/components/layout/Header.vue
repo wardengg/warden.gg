@@ -4,16 +4,16 @@
         <div class="wrap d-flex align-items-center">
             <div class="logo">
                 <router-link to="/" class="d-flex align-items-center">
-                    <img class="mr-2" src="/static/images/logo.svg" alt="Warden.GG Logo" width="48" height="48">
+                    <img class="warden-gg-logo mr-2" src="/static/images/logo.svg" alt="Warden.GG Logo" width="48" height="48">
                     <span class="logo-title">Warden.gg</span>
                 </router-link>
             </div>
             <nav class="navigation-menu main-navigation mr-auto">
                 <ul class="d-flex align-items-center justify-content-center">
                     <li>
-                        <router-link to="/">Minecraft Hosting</router-link>
+                        <router-link to="/minecraft/java">Minecraft Hosting</router-link>
                         <ul class="sub-navigation">
-                            <li><router-link to="/">Java Edition</router-link></li>
+                            <li><router-link to="/minecraft/java">Java Edition</router-link></li>
                             <li><router-link to="/">Bedrock Edition</router-link></li>
                         </ul>
                     </li>
@@ -46,7 +46,7 @@
         </div>
         <nav v-bind:class="{ active: isMobileActive }" class="navigation-menu mobile-navigation-menu">
             <ul>
-                <li><router-link to="/">Minecraft Hosting</router-link></li>
+                <li><router-link to="/minecraft/java">Minecraft Hosting</router-link></li>
                 <li><router-link to="/">Game Hosting</router-link></li>
                 <li><router-link to="/">Company</router-link></li>
             </ul>
@@ -72,6 +72,24 @@ export default {
 			e.preventDefault();
 			this.isMobileActive = !this.isMobileActive
 		}
-	}
+	},
+    mounted(){
+        document.addEventListener( 'mouseup', e => {
+            // Get variables
+            const header = document.getElementById( 'header' );
+            const mobile_menu = e.target.parentElement.parentElement.parentElement;
+            const is_warden_logo = e.target.classList.contains( 'warden-gg-logo' );
+            const is_mobile_menu = e.target.parentElement.parentElement.parentElement.classList.contains( 'mobile-navigation-menu' );
+            const is_navigation_menu = e.target.parentElement.parentElement.parentElement.classList.contains( 'navigation-menu' );
+            
+            // Remove class list
+            if ( is_navigation_menu || is_mobile_menu || is_warden_logo ){
+                header.classList.remove( 'vue-fixed-header--isFixed' );
+                header.classList.remove( 'mobile-active' );
+                mobile_menu.classList.remove( 'active' );
+                this.isMobileActive = false; 
+            }
+        } );
+    }
 }
 </script>

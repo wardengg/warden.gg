@@ -2,10 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
+// Vue Settings
 Vue.config.productionTip = false
 
 // This callback runs before every route change, including on page load.
 router.beforeEach((to, from, next) => {
+  // Scroll to the top.
+  window.scrollTo(0, 0);
+  
   // This goes through the matched routes from last to first, finding the closest route with a title.
   // eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
   const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);

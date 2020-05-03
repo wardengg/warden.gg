@@ -64,10 +64,6 @@ h6, .h6  {
 a{
 	color: $color1;
 	transition: $transition-base-speed ease-in-out opacity;
-	
-	&:hover{
-		opacity: .8;
-	}
 }
 
 blockquote{
@@ -154,13 +150,17 @@ hr{
 /* Misc. */
 .btn{
 	display: inline-block;
-	padding: map-get( $spacers, 1 ) map-get( $spacers, 3 );
+	padding: map-get( $spacers, 1 ) map-get( $spacers, 2 );
 	background-color: $color1;
 	font-family: $font2;
 	color: $color-white;
 	font-weight: 700;
 	text-transform: uppercase;
-	transition: $transition-base-speed ease-in-out transform;
+	@extend %transition-all;
+
+	&:hover{
+		background-color: $color2;
+	}
 
 	&.btn-large{
 		font-size: rem(28);
@@ -194,11 +194,20 @@ hr{
 }
 
 section[class*="-section"]{
-	padding: map-get( $spacers, 3 );
+	padding: map-get( $spacers, 3 ) 0;
 }
 
 .section-header{
 	text-align: center;
 	font-family: $font;
 	color: $color-white;
+	margin-bottom: map-get( $spacers, 3 );
+}
+
+.button-wrap{
+	margin-top: map-get( $spacers, 3 );
+
+	@include media-breakpoint-down(md){
+		margin-top: map-get( $spacers, 2 );
+	}
 }

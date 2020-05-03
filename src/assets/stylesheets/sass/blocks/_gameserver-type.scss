@@ -1,5 +1,6 @@
 /* Gameserver Type */
 .gameserver-type-section{
+    margin-top: -#{map-get( $spacers, 3 )};
     position: relative;
 
     &:before{
@@ -18,6 +19,11 @@
         @include media-breakpoint-down(md){
             margin-bottom: map-get( $spacers, 2 );
         }
+    }
+
+    .gameserver-type-inner{
+        padding: map-get( $spacers, 3 );
+        background-color: $color3;
     }
 
     .gameserver-type-item{

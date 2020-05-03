@@ -5,7 +5,7 @@
                 <img :src="image.url" :alt="name" :height="image.height" :width="image.width">
             </div>
             <h2>{{ name }}</h2>
-            <span class="btn btn-alt">View Games</span>
+            <span class="btn btn-alt">From ${{ from }}/month</span>
         </div>
     </div><!--/.col-md-6 col-12-->
 </template>
@@ -15,7 +15,8 @@ export default {
     name: 'GameserverTypeItem',
     props: {
         name: String,
-        image: Array,
+        image: Object,
+        from: String
     }
 }
 </script>

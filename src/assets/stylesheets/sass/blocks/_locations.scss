@@ -1,0 +1,73 @@
+/* Locations */
+.location-section{
+    .section-header{
+        color: $color3;
+    }
+
+    .location-map{
+        position: relative;
+        width: 100%;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        .marker{
+            position: absolute;
+            width: rem(20);
+            height: rem(20);
+            background-color: $color3;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba($color3, 1);
+            animation: pulse 2s infinite;
+
+            &:hover{
+                .marker-info{
+                    display: block;
+                }
+            }
+
+            .marker-info{
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                display: none;
+                margin-bottom: map-get( $spacers, 1 );
+                padding: map-get( $spacers, 2 );
+                width: rem(128);
+                width: rem(176);
+                background-color: $color3;
+                text-align: center;
+                transform: translateX(-50%);
+
+                .marker-flag{
+                    margin-bottom: map-get( $spacers, 1 );
+                }
+
+                .marker-title{
+                    display: block;
+                    font-family: $font;
+                    color: $color-white;
+                    font-size: rem(20);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* Marker Extras */
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba($color3, 0.7);
+	}
+
+	70% {
+		box-shadow: 0 0 0 rem(10) rgba($color3, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba($color3, 0);
+	}
+}

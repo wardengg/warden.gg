@@ -58,6 +58,7 @@
 <script>
 import FixedHeader from 'vue-fixed-header'
 export default {
+    name: 'Header',
 	components: {
 		FixedHeader
 	},

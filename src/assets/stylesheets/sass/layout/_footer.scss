@@ -19,12 +19,33 @@
 
     .copyright-row{
         p{
-            font-size: rem( 14 );
-            color: $color-white;
+            margin-bottom: 0;
         }
 
         .site-name{
             color: $color1;
+        }
+
+        .copyright-line{
+            display: inline-block;
+            font-size: rem( 14 );
+            color: $color-white;
+            margin-right: map-get( $spacers, 1 );
+            padding-right: map-get( $spacers, 1 );
+            border-right: rem(1) solid $color-white;
+
+            @include media-breakpoint-down(sm){
+                display: block;
+                width: 100%;
+                border-right: 0;
+                text-align: center;
+            }
+
+            &:last-child{
+                margin-right: 0;
+                padding-right: 0;
+                border-right: 0;
+            }
         }
     }
 

@@ -33,13 +33,13 @@
                 <div class="col-lg-3 footer-column-item">
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-navigation">
-                        <li><router-link to="/">Game Panel</router-link></li>
-                        <li><router-link to="/">Billing Portal</router-link></li>
+                        <li><a href="https://panel.warden.gg">Game Panel</a></li>
+                        <li><a href="https://billing.warden.gg">Billing Portal</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright-row">
-                <p>&copy; 2020 <span class="site-name">Warden.gg</span> | ABN: 33819224400</p>
+                <p><span class="copyright-line">&copy; 2020 <span class="site-name">Warden.gg</span></span><span class="copyright-line"><router-link to="/">Privacy Policy</router-link></span><span class="copyright-line">ABN: 33819224400</span></p>
             </div>
         </div>
     </footer>

@@ -1,0 +1,38 @@
+/* Why Warden */
+.why-warden-section{
+    .section-header{
+        color: $color3;
+    }
+
+    .why-warden-item{
+        height: 100%;
+        padding: map-get( $spacers, 2 );
+        background-color: $color3;
+        text-align: center;
+
+        .icon{
+            max-height: rem( 128 );
+            max-width: rem( 128 );
+            margin: 0 auto;
+            margin-bottom: map-get( $spacers, 2 );
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        h2{
+            font-family: $font;
+            color: $color-white;
+        }
+
+        .description{
+            p{
+                font-family: $font2;
+                color: $color-white;
+                font-size: rem( 18 );
+            }
+        }
+    }
+}

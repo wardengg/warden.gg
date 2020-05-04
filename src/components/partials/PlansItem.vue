@@ -1,6 +1,7 @@
     <template>
     <div class="col-lg-4 col-md-6 mb-3">
         <a :href="whmcs_link" class="plan-item">
+            <div v-if="advertisement_text && advertisement_colour" :class="advertisement_colour" class="advertisement-message">{{ advertisement_text }}</div>
             <h2 v-if="title" class="plan-title" v-html="title"></h2>
             <div v-if="price" class="price-ribbon">
                 <span class="price-ribbon-content">Starting from ${{ price }}</span>
@@ -24,7 +25,9 @@ export default {
         ram: String,
         recommended: String,
         whmcs_link: String,
-        gameserver_extras: Array
+        gameserver_extras: Array,
+        advertisement_text: String,
+        advertisement_colour: String
     }
 }
 </script>

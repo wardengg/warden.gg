@@ -7,6 +7,7 @@
     }
 
     .plan-item{
+        position: relative;
         display: block;
         padding: map-get( $spacers, 3 );
         background-color: $color3;
@@ -14,6 +15,22 @@
 
         &:hover{
             transform: translateY(-5%);
+        }
+
+        .advertisement-message{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: rem(10) rem(20);
+            font-size: rem(42);
+            color: $color-white;
+            font-family: $font;
+            white-space: nowrap;
+
+            &.bg-warden-gradient{
+                @extend %gradient-background;
+            }
         }
 
         .plan-title{

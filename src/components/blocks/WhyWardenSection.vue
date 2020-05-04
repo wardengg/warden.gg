@@ -65,11 +65,6 @@ export default {
                 },
             ]
         }
-    },
-    methods: {
-        callback({ going }) {
-          this.visible = going == this.$waypointMap.GOING_IN
-        }
     }
 }
 </script>

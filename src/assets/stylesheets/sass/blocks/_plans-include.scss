@@ -1,16 +1,28 @@
 /* Why Warden */
-.why-warden-section{
+.plans-include-section{
+    position: relative;
+    margin-top: -#{map-get( $spacers, 3 )};
+    padding-bottom: 0 !important;
     overflow: hidden;
 
-    .section-header{
-        color: $color3;
+    &:before{
+        @include top-triangle( $color3 );
     }
 
-    .why-warden-item{
+    .plans-include-inner{
+        padding-top: map-get( $spacers, 3 );
+        background-color: $color3;
+    }
+
+    .section-header{
+        color: $color-white;
+    }
+
+    .plans-include-item{
         height: 100%;
         padding: map-get( $spacers, 2 );
-        background-color: $color3;
         text-align: center;
+        @extend %gradient-background;
 
         .icon{
             max-height: rem( 128 );

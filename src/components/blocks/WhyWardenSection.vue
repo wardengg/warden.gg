@@ -4,7 +4,7 @@
             <h1 class="section-header">Why Warden.gg?</h1>
             <div class="row justify-content-center">
                 <div v-for="tile in whywarden" :key="tile.title" class="col-lg-3 col-md-6 mb-3">
-                    <div v-waypoint="{ active, callback }" class="why-warden-item">
+                    <div class="why-warden-item">
                         <div class="icon"><img :src="tile.icon" :alt="tile.title"></div>
                         <h2>{{ tile.title }}</h2>
                         <div class="description"><p>{{ tile.description }}</p></div>

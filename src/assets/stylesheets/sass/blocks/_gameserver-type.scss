@@ -30,7 +30,7 @@
     .gameserver-type-item{
         display: block;
         height: 100%;
-        padding: map-get( $spacers, 2 );
+        padding: map-get( $spacers, 3 );
         text-align: center;
         cursor: pointer;
         @extend %gradient-background;
@@ -40,20 +40,37 @@
             transform: translateY(-5%);
         }
 
-        .image-wrapper{
-            min-height: rem(128);
-            margin-bottom: map-get( $spacers, 2 );
-
-            img{
-                min-width: rem(128);
-                height: auto;
-            }
-        }
-
         h2{
             color: $color-white;
             font-family: $font;
             text-align: center;
+        }
+
+        .price-ribbon{
+            display: block;
+            background-color: $color-white;
+            margin: 0 -#{map-get( $spacers, 3 )};
+            margin-bottom: map-get( $spacers, 2 );
+
+            .price-ribbon-content{
+                display: block;
+                padding: map-get( $spacers, 2 ) 0;
+                font-family: $font;
+                font-size : rem( 36 );
+                color: $color3;
+                text-align: center;
+            }
+        }
+        
+        .extra-line{
+            color: $color-white;
+            font-family: $font;
+            text-align: center;
+            font-size: rem(36);
+
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
     }
 }

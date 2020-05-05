@@ -1,11 +1,11 @@
 <template>
     <div class="col-lg-3 col-md-6 col-12">
-        <router-link to="/minecraft/java" class="gameserver-type-item">
-            <div class="image-wrapper d-flex align-items-center justify-content-center">
-                <img :src="image.url" :alt="name" :height="image.height" :width="image.width">
-            </div>
+        <router-link ref="item" to="/minecraft/java" class="gameserver-type-item">
             <h2>{{ name }}</h2>
-            <span class="btn btn-alt">From ${{ from }}/month</span>
+            <div v-if="from" class="price-ribbon">
+                <span class="price-ribbon-content">Starting from ${{ from }}</span>
+            </div>
+            <p v-for="extra in extras" :key="extra.extra" class="extra-line">{{ extra.extra }}</p>
         </router-link>
     </div><!--/.col-md-6 col-12-->
 </template>
@@ -15,8 +15,8 @@ export default {
     name: 'GameserverTypeItem',
     props: {
         name: String,
-        image: Object,
-        from: String
+        from: String,
+        extras: Array
     }
 }
 </script>

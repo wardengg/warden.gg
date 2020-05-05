@@ -4,7 +4,7 @@
             <div class="wrap">
                 <h1 class="section-header">Supported Games</h1>
                 <div class="row justify-content-center">
-                    <GameserverTypeItem v-for="item in gameserver_types" :key="item.id" :image="item.acf.icon_image" :name="item.name" :from="item.acf.from"/>
+                    <GameserverTypeItem v-for="item in gameserver_types" :key="item.id" :name="item.name" :from="item.acf.from" :extras="item.acf.gameserver_type_extras"/>
                 </div>
                 <div class="button-wrap d-flex justify-content-center">
                     <router-link to="/gameservers" class="btn">View All Games</router-link>

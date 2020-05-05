@@ -31,6 +31,18 @@
             &.bg-warden-gradient{
                 @extend %gradient-background;
             }
+
+            &.bg-color1{
+                background-color: $color1;
+            }
+
+            &.bg-color2{
+                background-color: $color2;
+            }
+
+            &.bg-color4{
+                background-color: $color4;
+            }
         }
 
         .plan-title{

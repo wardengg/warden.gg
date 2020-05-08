@@ -17,7 +17,7 @@
                             <li><router-link to="/">Bedrock Edition</router-link></li>
                         </ul>
                     </li>
-                    <li><router-link to="/gameservers">Game Hosting</router-link></li>
+                    <li><router-link to="/games">Game Hosting</router-link></li>
                     <li>
                         <router-link to="/">Company</router-link>
                         <ul class="sub-navigation">
@@ -47,8 +47,8 @@
         <nav v-bind:class="{ active: isMobileActive }" class="navigation-menu mobile-navigation-menu">
             <ul>
                 <li><router-link to="/minecraft/java">Minecraft Hosting</router-link></li>
-                <li><router-link to="/gameservers">Game Hosting</router-link></li>
-                <li><router-link to="/gameservers">Company</router-link></li>
+                <li><router-link to="/games">Game Hosting</router-link></li>
+                <li><router-link to="/games">Company</router-link></li>
             </ul>
         </nav>
     </header>

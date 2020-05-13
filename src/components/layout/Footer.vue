@@ -26,7 +26,7 @@
                         <li><router-link to="/">About</router-link></li>
                         <li><router-link to="/">Locations</router-link></li>
                         <li><router-link to="/">Server Status</router-link></li>
-                        <li><router-link to="/">Support</router-link></li>
+                        <li><a href="https://discord.gg/QQ97A6u" target="_blank">Support</a></li>
 
                     </ul>
                 </div>

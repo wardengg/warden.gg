@@ -2,9 +2,9 @@
     <section class="gameserver-type-section">
         <div class="gameserver-type-inner">
             <div class="wrap">
-                <h1 class="section-header">Supported Games</h1>
+                <h1 class="section-header">Our Games</h1>
                 <div class="row justify-content-center">
-                    <GameserverTypeItem v-for="item in gameserver_types" :key="item.id" :name="item.name" :from="item.acf.from" :extras="item.acf.gameserver_type_extras"/>
+                    <GameserverTypeItem v-for="item in gameserver_types" :key="item.id" :name="item.name" :from="item.acf.from" :extras="item.acf.gameserver_type_extras" :to="item.acf.link_to"/>
                 </div>
                 <div class="button-wrap d-flex justify-content-center">
                     <router-link to="/games" class="btn">View All Games</router-link>
@@ -28,7 +28,7 @@ export default {
     },
     mounted(){
         // Fetch Gameserver Types
-        fetch( 'https://wp.warden.gg/wp-json/wp/v2/gameserver-type' )
+        fetch( 'https://wp.warden.gg/wp-json/wp/v2/gameserver-type?orderby=menu_order' )
             .then( ( r ) => r.json() )
             .then( ( res ) => this.gameserver_types = res.map( x => x ) );
     }

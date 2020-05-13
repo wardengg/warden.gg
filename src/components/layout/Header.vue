@@ -37,7 +37,7 @@
                             <li><router-link to="/">Billing</router-link></li>
                         </ul>
                     </li>
-                    <li><router-link to="/">Support</router-link></li>
+                    <li><a href="https://discord.gg/QQ97A6u" target="_blank">Support</a></li>
                 </ul>
             </nav>
             <a href="#" class="main-navigation-mobile-trigger" v-on:click="openMobileNavigation">

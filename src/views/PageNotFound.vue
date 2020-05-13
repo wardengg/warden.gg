@@ -1,15 +1,15 @@
 <template>
     <div class="404">
-        <ImageBanner :full_height="true" :image="'/static/images/404.jpg'"/>
+        <VideoBanner :video_link="'/static/videos/404.webm'" :video_heading="'Page Not Found'"/>
     </div>
 </template>
 
 <script>
-import ImageBanner from '../components/blocks/ImageBanner.vue';
+import VideoBanner from '../components/blocks/VideoBanner.vue';
 export default {
     name: 'PageNotFound',
     components: {
-        ImageBanner
+        VideoBanner
     }
 }
 </script>

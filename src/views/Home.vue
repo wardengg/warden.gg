@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <VideoBanner/>
+        <VideoBanner :video_link="'/static/videos/videobanner.mp4'" :video_heading="'View our comprehensive selection of games<br/>and experience world-class reliability'"/>
         <GameserverTypeSection/>
         <WhyWardenSection/>
     </div>

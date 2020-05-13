@@ -18,7 +18,7 @@
 
     .col-12{
         @include media-breakpoint-down(md){
-            margin-bottom: map-get( $spacers, 2 );
+            margin-bottom: map-get( $spacers, 3 );
         }
     }
 
@@ -67,6 +67,7 @@
             font-family: $font;
             text-align: center;
             font-size: rem(36);
+            line-height: 1;
 
             &:last-child{
                 margin-bottom: 0;

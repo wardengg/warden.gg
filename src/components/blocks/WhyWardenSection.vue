@@ -46,12 +46,12 @@ export default {
                 {
                     icon: '/static/images/firewall-white.svg',
                     title: 'DDoS Protection',
-                    description: "Our network is protected by a firewall that is constantly adapting itself to ensure a playable experience."
+                    description: "Our network is protected by a firewall that is constantly adapting itself to ensure an uninterrupted connection"
                 },
                 {
                     icon: '/static/images/ethernet-white.svg',
                     title: '1Gbps Network',
-                    description: "Every server is equipped with a high-speed link allowing for an uninterrupted connection."
+                    description: "Every server is equipped with a high-speed link allowing for a lag-free playing experience!"
                 },
                 {
                     icon: '/static/images/clock-white.svg',

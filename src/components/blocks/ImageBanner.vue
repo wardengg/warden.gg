@@ -15,7 +15,6 @@
 export default {
     name: 'ImageBanner',
     props: {
-        typeid: Number,
         image: String,
         full_height: Boolean
     },

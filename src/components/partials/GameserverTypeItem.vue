@@ -1,6 +1,6 @@
 <template>
-    <div class="col-lg-3 col-md-6 col-12">
-        <router-link ref="item" to="/minecraft/java" class="gameserver-type-item">
+    <div class="col-xl-3 col-md-6 col-12">
+        <router-link ref="item" :to="to" class="gameserver-type-item">
             <h2>{{ name }}</h2>
             <div v-if="from" class="price-ribbon">
                 <span class="price-ribbon-content">Starting from ${{ from }}</span>
@@ -16,7 +16,8 @@ export default {
     props: {
         name: String,
         from: String,
-        extras: Array
+        extras: Array,
+        to: String
     }
 }
 </script>

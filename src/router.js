@@ -6,6 +6,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import MinecraftHostingJava from './views/MinecraftHostingJava.vue'
 import GameserverHosting from './views/GameserverHosting.vue'
+import GameserverHostingSingle from './views/GameserverHostingSingle.vue'
 import PageNotFound from './views/PageNotFound.vue'
 
 Vue.use(Router)
@@ -32,10 +33,19 @@ export default new Router({
 		},
 		{
 			path: '/games',
-			name: 'Games Hosting',
+			name: 'Games',
 			component: GameserverHosting,
 			meta: {
-				title: 'Games Hosting - Warden.gg'
+				title: 'Games - Warden.gg'
+			}
+		},
+		{
+			path: '/games/source-engine',
+			name: 'Source Engine Hosting',
+			component: GameserverHostingSingle,
+			gameservertypeid: 3,
+			meta: {
+				title: 'Source Engine Hosting - Warden.gg'
 			}
 		},
 		{

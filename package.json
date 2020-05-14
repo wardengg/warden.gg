@@ -12,6 +12,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.3.1",
     "core-js": "^3.6.4",
+    "git-describe": "^4.0.4",
     "jquery": "^3.5.0",
     "nprogress": "^0.2.0",
     "vue": "^2.6.11",

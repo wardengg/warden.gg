@@ -6,26 +6,26 @@
     }
 }
 
-@mixin top-triangle( $color: $color3 ){
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-right: 100vw solid transparent;
-    border-left: rem(0) solid transparent;
-    border-bottom: map-get( $spacers, 3 ) solid $color;
-}
+// @mixin top-triangle( $color: $color3 ){
+//     position: absolute;
+//     content: '';
+//     top: 0;
+//     left: 0;
+//     width: 0;
+//     height: 0;
+//     border-right: 100vw solid transparent;
+//     border-left: rem(0) solid transparent;
+//     border-bottom: map-get( $spacers, 3 ) solid $color;
+// }
 
-@mixin bottom-triangle( $color: $color3 ){
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-right: rem(0) solid transparent;
-    border-left: 100vw solid transparent;
-    border-top: map-get( $spacers, 3 ) solid $color;
-}
+// @mixin bottom-triangle( $color: $color3 ){
+//     position: absolute;
+//     content: '';
+//     bottom: 0;
+//     left: 0;
+//     width: 0;
+//     height: 0;
+//     border-right: rem(0) solid transparent;
+//     border-left: 100vw solid transparent;
+//     border-top: map-get( $spacers, 3 ) solid $color;
+// }

@@ -27,7 +27,6 @@ export default {
         }
     },
     async created(){
-        console.log( this.$route );
         const games = await axios.get( 'https://wp.warden.gg/wp-json/wp/v2/gameserver-type/' + this.getGameserverTypeID );
 
         if ( games.data ){

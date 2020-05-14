@@ -15,6 +15,14 @@ $color1: #37b8cd;
 $color2: #2da9d8;
 $color3: #2a2b2d;
 $color4: red;
+$color5: #8FD794;
+$color6: #67CB7B;
+$color7: #1C54A0;
+$color8: #1546C9;
+$color9: #E18C7D;
+$color10: #ED804C;
+$color11: #E8534D;
+$color12: #E53B47;
 $color-white: #ffffff;
 $color-black: #000000;
 
@@ -60,8 +68,36 @@ $transition-base-speed: .2s;
 }
 
 %gradient-background{
-    background: -moz-linear-gradient(90deg, rgba($color1,1) 0%, rgba($color2,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba($color1,1) 0%, rgba($color2,1) 100%);
-    background: linear-gradient(90deg, rgba($color1,1) 0%, rgba($color2,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#37b8cd",endColorstr="#2da9d8",GradientType=1);
+    background-image: -moz-linear-gradient(90deg, rgba($color1,1) 0%, rgba($color2,1) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba($color1,1) 0%, rgba($color2,1) 100%);
+    background-image: linear-gradient(90deg, rgba($color1,1) 0%, rgba($color2,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$color1,endColorstr=$color2,GradientType=1);
+}
+
+%gradient-background-green{
+    background-image: -moz-linear-gradient(90deg, rgba($color5,1) 0%, rgba($color6,1) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba($color5,1) 0%, rgba($color6,1) 100%);
+    background-image: linear-gradient(90deg, rgba($color5,1) 0%, rgba($color6,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$color5,endColorstr=$color6,GradientType=1);
+}
+
+%gradient-background-purple{
+    background-image: -moz-linear-gradient(90deg, rgba($color7,1) 0%, rgba($color8,1) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba($color7,1) 0%, rgba($color8,1) 100%);
+    background-image: linear-gradient(90deg, rgba($color7,1) 0%, rgba($color8,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$color7,endColorstr=$color8,GradientType=1);
+}
+
+%gradient-background-orange{
+    background-image: -moz-linear-gradient(90deg, rgba($color9,1) 0%, rgba($color10,1) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba($color9,1) 0%, rgba($color10,1) 100%);
+    background-image: linear-gradient(90deg, rgba($color9,1) 0%, rgba($color10,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$color9,endColorstr=$color10,GradientType=1);
+}
+
+%gradient-background-red{
+    background-image: -moz-linear-gradient(90deg, rgba($color11,1) 0%, rgba($color12,1) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba($color11,1) 0%, rgba($color12,1) 100%);
+    background-image: linear-gradient(90deg, rgba($color11,1) 0%, rgba($color12,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$color11,endColorstr=$color12,GradientType=1);
 }

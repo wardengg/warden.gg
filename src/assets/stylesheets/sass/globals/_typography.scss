@@ -152,7 +152,7 @@ hr{
 	display: inline-block;
 	padding: map-get( $spacers, 1 ) map-get( $spacers, 2 );
 	background-color: $color1;
-	font-family: $font2;
+	font-family: $font;
 	color: $color-white;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -163,13 +163,13 @@ hr{
 	}
 
 	&.btn-large{
-		font-size: rem(28);
-		line-height: rem(32);
+		font-size: rem(32);
+		line-height: rem(36);
 	}
 
 	&.btn-small{
-		font-size: rem(14);
-		line-height: rem(18);
+		font-size: rem(18);
+		line-height: rem(22);
 	}
 
 	&.btn-alt{

@@ -32,12 +32,30 @@
         height: 100%;
         padding: map-get( $spacers, 3 );
         text-align: center;
+        background-size: 300% 100%;
         cursor: pointer;
         @extend %gradient-background;
         @extend %transition-all;
 
         &:hover{
+            background-position: 100% 0;
             transform: translateY(-5%);
+        }
+
+        &.gradient-green{
+            @extend %gradient-background-green;
+        }
+
+        &.gradient-purple{
+            @extend %gradient-background-purple;
+        }
+
+        &.gradient-orange{
+            @extend %gradient-background-orange;
+        }
+
+        &.gradient-red{
+            @extend %gradient-background-red;
         }
 
         h2{

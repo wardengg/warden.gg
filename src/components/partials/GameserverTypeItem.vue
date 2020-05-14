@@ -1,6 +1,6 @@
 <template>
     <div class="col-xl-3 col-md-6 col-12">
-        <router-link ref="item" :to="to" class="gameserver-type-item">
+        <router-link ref="item" :to="to" class="gameserver-type-item" :class="background">
             <h2>{{ name }}</h2>
             <div v-if="from" class="price-ribbon">
                 <span class="price-ribbon-content">Starting from ${{ from }}</span>
@@ -17,7 +17,8 @@ export default {
         name: String,
         from: String,
         extras: Array,
-        to: String
+        to: String,
+        background: String
     }
 }
 </script>

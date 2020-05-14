@@ -15,6 +15,14 @@
 
         &:hover{
             transform: translateY(-5%);
+
+            .price-ribbon{
+                background-position: 100% 0;
+            }
+
+            .add-to-cart{
+                background-position: 100% 0;
+            }
         }
 
         .advertisement-message{
@@ -57,7 +65,25 @@
             background-color: $color3;
             margin: 0 -#{map-get( $spacers, 3 )};
             margin-bottom: map-get( $spacers, 2 );
+            background-size: 300% 100%;
             @extend %gradient-background;
+            @extend %transition-all;
+
+            &.gradient-green{
+                @extend %gradient-background-green;
+            }
+
+            &.gradient-purple{
+                @extend %gradient-background-purple;
+            }
+
+            &.gradient-orange{
+                @extend %gradient-background-orange;
+            }
+
+            &.gradient-red{
+                @extend %gradient-background-red;
+            }
 
             .price-ribbon-content{
                 display: block;
@@ -94,7 +120,25 @@
             font-family: $font;
             font-weight: 700;
             font-size: rem( 36 );
+            background-size: 300% 100%;
             @extend %gradient-background;
+            @extend %transition-all;
+
+            &.gradient-green{
+                @extend %gradient-background-green;
+            }
+
+            &.gradient-purple{
+                @extend %gradient-background-purple;
+            }
+
+            &.gradient-orange{
+                @extend %gradient-background-orange;
+            }
+
+            &.gradient-red{
+                @extend %gradient-background-red;
+            }
         }
     }
 

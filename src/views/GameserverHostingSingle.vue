@@ -1,7 +1,7 @@
 <template>
     <div class="gameserver-hosting">
         <ImageBanner :image="chosenImageBannerURL"/>
-        <!-- <PlansSection :title="game.name" :gameservertypeid="game.id"/> -->
+        <PlansSection :title="game.name" :gameservertypeid="gameservertypeid" :show_title="false"/>
         <PlansIncludeSection/>
     </div>
 </template>
@@ -16,23 +16,25 @@ export default {
     name: 'Home',
     components:{
         ImageBanner,
-        // PlansSection,
+        PlansSection,
         PlansIncludeSection
     },
+    props: [
+        'gameservertypeid'
+    ],
     data(){
         return{
-            games: {},
+            game: {},
             chosenImageBannerURL: '',
-
         }
     },
     async created(){
-        const games = await axios.get( 'https://wp.warden.gg/wp-json/wp/v2/gameserver-type/' + this.getGameserverTypeID );
+        const games = await axios.get( 'https://wp.warden.gg/wp-json/wp/v2/gameserver-type/' + this.gameservertypeid );
 
         if ( games.data ){
-            this.games = games.data;
+            this.game = games.data;
 
-            this.chosenImageBannerURL = this.games.acf.banner_image;
+            this.chosenImageBannerURL = this.game.acf.banner_image;
         }
     },
     computed: {

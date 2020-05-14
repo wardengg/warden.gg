@@ -1,7 +1,7 @@
 <template>
     <div class="minecraft-hosting">
         <ImageBanner v-if="ImageBannerURL" :image="ImageBannerURL"/>
-        <PlansSection v-if="TypeID" :gameservertypeid="TypeID" :is_minecraft="true"/>
+        <PlansSection v-if="TypeID" :gameservertypeid="TypeID" :is_minecraft="true" :show_title="true"/>
         <PlansIncludeSection/>
     </div>
 </template>

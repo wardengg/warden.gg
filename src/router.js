@@ -24,14 +24,6 @@ export default new Router({
 			}
 		},
 		{
-			path: '/minecraft/java',
-			name: 'Minecraft Hosting',
-			component: MinecraftHostingJava,
-			meta: {
-				title: 'Minecraft Hosting - Warden.gg'
-			}
-		},
-		{
 			path: '/games',
 			name: 'Games',
 			component: GameserverHosting,
@@ -40,12 +32,44 @@ export default new Router({
 			}
 		},
 		{
+			path: '/minecraft/java',
+			name: 'Minecraft Hosting',
+			component: MinecraftHostingJava,
+			meta: {
+				title: 'Minecraft Hosting - Warden.gg'
+			}
+		},
+		{
 			path: '/games/source-engine',
 			name: 'Source Engine Hosting',
 			component: GameserverHostingSingle,
-			gameservertypeid: 3,
 			meta: {
 				title: 'Source Engine Hosting - Warden.gg'
+			},
+			props: {
+				gameservertypeid: 3
+			}
+		},
+		{
+			path: '/games/gta-online',
+			name: 'GTA: Online Hosting',
+			component: GameserverHostingSingle,
+			meta: {
+				title: 'GTA: Online Hosting - Warden.gg'
+			},
+			props: {
+				gameservertypeid: 6
+			}
+		},
+		{
+			path: '/games/bohemia',
+			name: 'Bohemia Hosting',
+			component: GameserverHostingSingle,
+			meta: {
+				title: 'Bohemia Hosting - Warden.gg'
+			},
+			props: {
+				gameservertypeid: 4
 			}
 		},
 		{

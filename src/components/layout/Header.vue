@@ -33,8 +33,8 @@
                     <li>
                         <router-link to="/">Login</router-link>
                         <ul class="sub-navigation">
-                            <li><router-link to="/">Panel</router-link></li>
-                            <li><router-link to="/">Billing</router-link></li>
+                            <li><a href="https://panel.warden.gg">panel</a></li>
+                            <li><a href="https://billing.warden.gg">Billing</a></li>
                         </ul>
                     </li>
                     <li><a href="https://discord.gg/QQ97A6u" target="_blank">Support</a></li>

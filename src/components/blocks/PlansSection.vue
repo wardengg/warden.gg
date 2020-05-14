@@ -1,7 +1,7 @@
 <template>
     <section class="plans-section">
         <div class="wrap">
-            <h1 class="section-header" v-html="title"></h1>
+            <h1 v-if="show_title" class="section-header" v-html="title"></h1>
             <div class="row justify-content-center">
                 <PlansItem v-for="plan in plans" :key="plan.id" :gameservertypeid="gameservertypeid" :title="plan.title.rendered" :price="plan.acf.price" :ram="plan.acf.ram" :recommended="plan.acf.recommended_slots" :whmcs_link="plan.acf.whmcs_link" :gameserver_extras="plan.acf.gameserver_extras" :advertisement_text="plan.acf.enable_advertisement_banner ? plan.acf.advertisement_banner_text : ''" :advertisement_colour="plan.acf.enable_advertisement_banner ? plan.acf.advertisement_colour : ''"/>
             </div>
@@ -18,11 +18,12 @@ import PlansItem from '../../components/partials/PlansItem.vue'
 
 export default {
     name: 'PlansSection',
-    props: {
-        title: String,
-        gameservertypeid: Number,
-        is_minecraft: Boolean
-    },
+    props: [
+        'title',
+        'gameservertypeid',
+        'is_minecraft',
+        'show_title'
+    ],
     components: {
         PlansItem
     },

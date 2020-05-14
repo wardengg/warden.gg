@@ -2,7 +2,7 @@
     <div class="gameserver-hosting">
         <ImageBanner :image="chosenImageBannerURL"/>
         <section v-for="game in games" v-bind:key="game.id" class="gameserver-title">
-            <PlansSection :title="game.name" :gameservertypeid="game.id"/>
+            <PlansSection :title="game.name" :gameservertypeid="game.id" :show_title="true"/>
         </section>
         <PlansIncludeSection/>
     </div>

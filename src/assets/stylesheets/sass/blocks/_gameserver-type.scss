@@ -4,14 +4,6 @@
     position: relative;
     overflow: hidden;
 
-    &:before{
-        @include top-triangle( $color3 );
-    }
-
-    &:after{
-        @include bottom-triangle( $color3 );
-    }
-
     .section-header{
         margin-bottom: map-get( $spacers, 3 );
     }

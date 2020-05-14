@@ -14,6 +14,7 @@
 export default {
     name: 'GameserverTypeItem',
     props: {
+        gameservertypeid: Number,
         name: String,
         from: String,
         extras: Array,

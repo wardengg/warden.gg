@@ -4,7 +4,7 @@
             <div class="wrap">
                 <h1 class="section-header">Our Games</h1>
                 <div class="row justify-content-center">
-                    <GameserverTypeItem v-for="item in gameserver_types" :key="item.id" :name="item.name" :from="item.acf.from" :extras="item.acf.gameserver_type_extras" :to="item.acf.link_to" :background="item.acf.gradient_background"/>
+                    <GameserverTypeItem v-for="item in gameserver_types" :key="item.id" :gameservertypeid="item.id" :name="item.name" :from="item.acf.from" :extras="item.acf.gameserver_type_extras" :to="item.acf.link_to" :background="item.acf.gradient_background"/>
                 </div>
                 <div class="button-wrap d-flex justify-content-center">
                     <router-link to="/games" class="btn btn-large">View All Games</router-link>

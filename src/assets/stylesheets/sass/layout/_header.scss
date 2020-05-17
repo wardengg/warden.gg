@@ -105,8 +105,9 @@
 
                 &:hover{
                     > a{
-                        opacity: 1;
+                        color: $color1;
                         background-color: rgba( $color3, 0.8 );
+                        opacity: 1;
                     }
 
                     > .sub-navigation{
